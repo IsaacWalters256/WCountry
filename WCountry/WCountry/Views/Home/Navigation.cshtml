@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Navigation Page";
+}
+
+<div class="text-center">
+    <h1>The WCountry Phone Book</h1>
+
+    <table class="table table-bordered table-striped table-sm">
+        <thead>
+            <tr><th>Page Name:</th><th>Phone Number:</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Home Page</td>
+                <td><a asp-controller="Home" asp-action="Index">556-6534</a></td>
+            </tr>
+            <tr>
+                <td>Navigation Page</td>
+                <td><a asp-controller="Home" asp-action="Navigation">556-1234</a></td>
+            </tr>
+            <tr>
+                <td>Privacy Policy Page</td>
+                <td><a asp-controller="Home" asp-action="Privacy">556-1111</a></td>
+            </tr>
+            <tr>
+                <td>Blender Page</td>
+                <td><a asp-controller="Home" asp-action="VipBlender">556-5364</a></td>
+            </tr>
+            <tr>
+                <td>Log In Page</td>
+                <td><a asp-controller="Account" asp-action="Login">242-6576</a></td>
+            </tr>
+            <tr>
+                <td>Registration Page</td>
+                <td><a asp-controller="Account" asp-action="Register">242-8975</a></td>
+            </tr>
+            <tr>
+                <td>Admin Page</td>
+                <td><a asp-controller="Admin" asp-action="Index">990-3578</a></td>
+            </tr>
+            <tr>
+                <td>WTown Page</td>
+                <td><a asp-controller="WTown" asp-action="Index">454-0007</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
