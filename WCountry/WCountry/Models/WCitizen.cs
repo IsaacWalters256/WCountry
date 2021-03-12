@@ -14,8 +14,19 @@ namespace WCountry.Models
         [DataType(DataType.Text)]
         [Required]
         public string Name { get; set; }
+        public DateTime RegisterDate { get; set; }
+        public int WDollars { get; set; }
+        public string AvatarColor { get; set; }
+        public IList<WShop> OwnedWShops { get; set; }
+        public IList<Item> OwnedItems { get; set; }
 
         [NotMapped]
         public IList<string> RoleNames { get; set; }
     }
 }
+/*
+Rii   Qwerty1!
+Death     Death1!
+
+
+*/
