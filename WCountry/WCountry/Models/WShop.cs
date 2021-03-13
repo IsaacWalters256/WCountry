@@ -13,7 +13,7 @@ namespace WCountry.Models
         public WCitizen Owner { get; set; }
         public IList<Item> SaleItems { get; set; }
         public WTown TownLocation { get; set; }
-        public int StreetLocation { get; set; }
+        //public int StreetLocation { get; set; }
 
     }
 }

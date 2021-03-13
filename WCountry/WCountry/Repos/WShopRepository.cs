@@ -16,6 +16,7 @@ namespace WCountry.Repos
         }
 
         public IQueryable<WShop> WShop { get { return context.WShops.Include(wshops => wshops.Owner).Include(wshop => wshop.SaleItems).ThenInclude(item => item.Owner); } }
+        public IQueryable<WTown> WTown { get { return context.WTowns.Include(wtowns => wtowns.TownName).Include(wtowns => wtowns.Mayor); } }
 
         public void AddItem(Item item)
         {

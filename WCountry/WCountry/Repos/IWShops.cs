@@ -9,6 +9,7 @@ namespace WCountry.Repos
     public interface IWShops
     {
         IQueryable<WShop> WShop { get; }
+        IQueryable<WTown> WTown { get; }
 
         void AddWShop(WShop wshop);
         void AddWTown(WTown wtown);

@@ -11,6 +11,7 @@ namespace WCountry.Models
         [Required(ErrorMessage = "Please enter a username.")]
         [StringLength(50)]
         public string Username { get; set; }
+        public string Color { get; set; }
 
         [Required(ErrorMessage = "Please enter a password.")]
         [DataType(DataType.Password)]

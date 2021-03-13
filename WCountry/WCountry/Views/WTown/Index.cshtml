@@ -1,5 +1,34 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<WShop>
 @{
+    ViewData["Title"] = "WTown";
+}
+
+<h1 class="display-4">Filter WShops</h1>
+Enter an owner name:
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="owner" class="control-label col-md-1">Owner:</label>
+        <input name="owner" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <label for="wtown" class="control-label col-md-1">Town Name:</label>
+        <input name="wtown" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+        <a asp-action="Index" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+
+<h2>Messages:</h2>
+@foreach (WShop wshop in Model)
+{
+    <p>
+        <strong class="pr-3">Owner of store:</strong>
+        @wshop.Owner.Name<br />
+        <strong class="pr-3">Store Name:</strong>
+        @wshop.WShopName <br />
+    </p>
+
+    
 }

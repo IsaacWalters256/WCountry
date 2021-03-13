@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WCountry.Repos;
 
 namespace WCountry.Models
 {
@@ -10,6 +11,7 @@ namespace WCountry.Models
     {
         public static void Seed(WShopContext context, UserManager<WCitizen> userManager, RoleManager<IdentityRole> roleManager)
         {
+
             if (!context.WShops.Any())
             {
                 //create member role
@@ -22,6 +24,7 @@ namespace WCountry.Models
                 WCitizen yuiNioson = new WCitizen { UserName = "Destroyer5757", Name = "Yui Nioson" };
                 context.Users.Add(yuiNioson);
 
+
                 WCitizen siteadmin = new WCitizen
                 {
                     UserName = "Rii",
@@ -30,6 +33,13 @@ namespace WCountry.Models
                 userManager.CreateAsync(siteadmin, "Qwerty1!").Wait();
                 IdentityRole adminRole = roleManager.FindByNameAsync("Admin").Result;
                 userManager.AddToRoleAsync(siteadmin, adminRole.Name);
+
+                WTown wenchester = new WTown
+                {
+                    TownName = "Wenchester",
+                    //Mayor = siteadmin
+                };
+                context.WTowns.Add(wenchester);
 
                 WShop wshop = new WShop
                 {
