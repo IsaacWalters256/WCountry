@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WCountry.Models;
@@ -14,6 +15,14 @@ namespace WCountry.Controllers
         IWShops repo;
         UserManager<WCitizen> userManager;
 
+        public WTownController(IWShops r, UserManager<WCitizen> u)
+        {
+            //context = c;
+            repo = r;
+            userManager = u;
+
+        }
+
         public IActionResult Index()
         {
             List<WShop> wshops = repo.WShop.ToList<WShop>();
@@ -22,7 +31,7 @@ namespace WCountry.Controllers
         }
 
         [HttpPost]
-        public IActionResult Messages(string owner, string wtown)//, string shopName)
+        public IActionResult Index(string owner)//, string shopName)
         {
             List<WShop> wshops = null;
 
@@ -30,12 +39,6 @@ namespace WCountry.Controllers
             {
                 wshops = (from m in repo.WShop
                           where m.Owner.Name == owner
-                          select m).ToList();
-            }
-            else if (wtown != null)
-            {
-                wshops = (from m in repo.WShop
-                          where m.TownLocation.TownName == wtown
                           select m).ToList();
             }
             //else if (shopName != null)
@@ -47,6 +50,7 @@ namespace WCountry.Controllers
             return View(wshops);
         }
 
+        [Authorize]
         public IActionResult CreateWShop()
         {
             return View();
@@ -58,24 +62,37 @@ namespace WCountry.Controllers
 
             model.Owner = userManager.GetUserAsync(User).Result;
             //model.TownLocation = userManager.GetUserAsync(User).Result.TownResidence;
-            model.TownLocation = (from m in repo.WTown
-                                  where m.TownName == "Wenchester"
-                                  select m).First();
 
 
             repo.AddWShop(model);
 
-            return View(model);
+            return RedirectToAction("Index", "WTown");
         }
-        
-        public IActionResult EditWShop()
+
+        [Authorize]
+        public IActionResult CreateItem()
         {
             return View();
         }
 
-        public IActionResult ViewWShop()
+        [HttpPost]
+        public IActionResult CreateItem(Item model)
         {
-            return View();
+
+            model.Owner = userManager.GetUserAsync(User).Result;
+            model.IsInShop = false;
+
+            repo.AddItem(model);
+            return RedirectToAction("Index", "WTown");
         }
+
+        public IActionResult ViewWShop(string wshopName)
+        {
+            //var wshopVM = new WShopVM { WShopName = wshopName };
+            WShop wshop = repo.GetWShopByName(wshopName);
+            return View(wshop);
+        }
+
+
     }
 }

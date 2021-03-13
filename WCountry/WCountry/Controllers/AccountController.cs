@@ -31,7 +31,6 @@ namespace WCountry.Controllers
             {
                 var user = new WCitizen { UserName = model.Username };
                 user.WDollars = 50;
-                user.TownResidence = userManager.GetUserAsync(User).Result.TownResidence;
                 var result = await userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

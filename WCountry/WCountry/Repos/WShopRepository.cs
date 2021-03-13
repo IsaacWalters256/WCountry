@@ -16,7 +16,6 @@ namespace WCountry.Repos
         }
 
         public IQueryable<WShop> WShop { get { return context.WShops.Include(wshops => wshops.Owner).Include(wshop => wshop.SaleItems).ThenInclude(item => item.Owner); } }
-        public IQueryable<WTown> WTown { get { return context.WTowns.Include(wtowns => wtowns.TownName).Include(wtowns => wtowns.Mayor); } }
 
         public void AddItem(Item item)
         {
@@ -30,11 +29,6 @@ namespace WCountry.Repos
             context.SaveChanges();
         }
 
-        public void AddWTown(WTown wtown)
-        {
-            context.WTowns.Add(wtown);
-            context.SaveChanges();
-        }
 
         public List<Item> GetAllItems()
         {
@@ -44,11 +38,6 @@ namespace WCountry.Repos
         public List<WShop> GetAllWShops()
         {
             return context.WShops.Include(async => async.Owner).ToList();
-        }
-
-        public List<WTown> GetAllWTowns()
-        {
-            return context.WTowns.Include(async => async.Mayor).ToList();
         }
 
         public WShop GetWShopByName(string name)

@@ -34,13 +34,6 @@ namespace WCountry.Models
                 IdentityRole adminRole = roleManager.FindByNameAsync("Admin").Result;
                 userManager.AddToRoleAsync(siteadmin, adminRole.Name);
 
-                WTown wenchester = new WTown
-                {
-                    TownName = "Wenchester",
-                    //Mayor = siteadmin
-                };
-                context.WTowns.Add(wenchester);
-
                 WShop wshop = new WShop
                 {
                     WShopName = "A Tics Article",

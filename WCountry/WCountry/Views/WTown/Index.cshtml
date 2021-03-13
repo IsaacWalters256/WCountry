@@ -11,10 +11,6 @@ Enter an owner name:
         <input name="owner" class="form-control col-md-6" />
     </div>
     <div class="row p-2">
-        <label for="wtown" class="control-label col-md-1">Town Name:</label>
-        <input name="wtown" class="form-control col-md-6" />
-    </div>
-    <div class="row p-2">
         <button type="submit" class="form-control btn btn-success col-2">Submit</button>
         <a asp-action="Index" class="btn btn-secondary col-3">Reset</a>
     </div>
@@ -25,9 +21,10 @@ Enter an owner name:
 {
     <p>
         <strong class="pr-3">Owner of store:</strong>
-        @wshop.Owner.Name<br />
+        @wshop.Owner.UserName<br />
         <strong class="pr-3">Store Name:</strong>
         @wshop.WShopName <br />
+        <a asp-action="ResponsePage" asp-route-wshopName="@wshop.WShopName" class="btn btn-secondary col-3">View WShop</a>
     </p>
 
     

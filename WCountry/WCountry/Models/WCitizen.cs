@@ -17,7 +17,6 @@ namespace WCountry.Models
         public DateTime RegisterDate { get; set; }
         public int WDollars { get; set; }
         public string AvatarColor { get; set; }
-        public WTown TownResidence { get; set; }
         public IList<WShop> OwnedWShops { get; set; }
         public IList<Item> OwnedItems { get; set; }
 
