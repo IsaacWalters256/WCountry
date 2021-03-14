@@ -1,0 +1,33 @@
+﻿@model List<Item>
+@{
+    ViewData["Title"] = "Items List";
+}
+
+<h1 class="display-4">Filter Items</h1>
+Enter an owner name:
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="owner" class="control-label col-md-1">Owner:</label>
+        <input name="owner" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+        <a asp-action="ViewItems" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+
+<h2>Items:</h2>
+@foreach (Item item in Model)
+{
+<p>
+    <strong class="pr-3">Owner of said Item:</strong>
+    @item.Owner.UserName<br />
+    <strong class="pr-3">Item Name:</strong>
+    @item.ItemName <br />
+    <strong class="pr-3">Item Description:</strong>
+    @item.ItemDesc <br />
+    <strong class="pr-3">Item Price:</strong>
+    @item.ItemPrice <br />
+</p>
+
+}

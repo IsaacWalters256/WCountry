@@ -8,12 +8,12 @@ namespace WCountry.Models
 {
     public class WShop
     {
+        private List<Review> reviews = new List<Review>();
         [Key]
         public string WShopName { get; set; }
         public WCitizen Owner { get; set; }
         public IList<Item> SaleItems { get; set; }
-        public WTown TownLocation { get; set; }
-        public int StreetLocation { get; set; }
-
+        public IList<Review> Reviews { get { return reviews; } }
+        
     }
 }

@@ -85,11 +85,12 @@ C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\Home\Navigation.cshtml.g.cs
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\Home\VipBlender.cshtml.g.cs
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\CreateWShop.cshtml.g.cs
-C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\EditWShop.cshtml.g.cs
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\Index.cshtml.g.cs
-C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\ViewWShop.cshtml.g.cs
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.Views.pdb
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.dll
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.pdb
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.genruntimeconfig.cache
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\CreateItem.cshtml.g.cs
+C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\ViewItems.cshtml.g.cs
+C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\ReviewPage.cshtml.g.cs

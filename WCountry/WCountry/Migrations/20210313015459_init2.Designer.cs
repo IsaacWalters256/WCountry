@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WCountry.Models;
 
 namespace WCountry.Migrations
 {
     [DbContext(typeof(WShopContext))]
-    partial class WShopContextModelSnapshot : ModelSnapshot
+    [Migration("20210313015459_init2")]
+    partial class init2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -250,31 +252,6 @@ namespace WCountry.Migrations
                     b.ToTable("Items");
                 });
 
-            modelBuilder.Entity("WCountry.Models.Review", b =>
-                {
-                    b.Property<int>("ResponseID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ReviewNumber")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ReviewerId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("WShopName")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("ResponseID");
-
-                    b.HasIndex("ReviewerId");
-
-                    b.HasIndex("WShopName");
-
-                    b.ToTable("Reviews");
-                });
-
             modelBuilder.Entity("WCountry.Models.WShop", b =>
                 {
                     b.Property<string>("WShopName")
@@ -370,17 +347,6 @@ namespace WCountry.Migrations
 
                     b.HasOne("WCountry.Models.WShop", null)
                         .WithMany("SaleItems")
-                        .HasForeignKey("WShopName");
-                });
-
-            modelBuilder.Entity("WCountry.Models.Review", b =>
-                {
-                    b.HasOne("WCountry.Models.WCitizen", "Reviewer")
-                        .WithMany()
-                        .HasForeignKey("ReviewerId");
-
-                    b.HasOne("WCountry.Models.WShop", null)
-                        .WithMany("Reviews")
                         .HasForeignKey("WShopName");
                 });
 

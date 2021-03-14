@@ -13,6 +13,7 @@ namespace WCountry.Models
         public string ItemName { get; set; }
         public string ItemDesc { get; set; }
         public bool IsInShop { get; set; }
+        [Range(0,300)]
         public int ItemPrice { get; set; }
     }
 }

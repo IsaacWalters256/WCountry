@@ -23,17 +23,22 @@ namespace WCountry.Repos
             context.SaveChanges();
         }
 
+        public int AddReviews(List<Review> reviews)
+        {
+            int sum = 0;
+            foreach (Review review in reviews)
+            {
+                sum = sum + review.ReviewNumber;
+            }
+            return sum;
+        }
+
         public void AddWShop(WShop wshop)
         {
             context.WShops.Add(wshop);
             context.SaveChanges();
         }
 
-        public void AddWTown(WTown wtown)
-        {
-            context.WTowns.Add(wtown);
-            context.SaveChanges();
-        }
 
         public List<Item> GetAllItems()
         {
@@ -43,11 +48,6 @@ namespace WCountry.Repos
         public List<WShop> GetAllWShops()
         {
             return context.WShops.Include(async => async.Owner).ToList();
-        }
-
-        public List<WTown> GetAllWTowns()
-        {
-            return context.WTowns.Include(async => async.Mayor).ToList();
         }
 
         public WShop GetWShopByName(string name)

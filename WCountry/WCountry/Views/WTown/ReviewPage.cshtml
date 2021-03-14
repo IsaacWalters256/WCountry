@@ -1,0 +1,25 @@
+﻿@model ReviewVM
+@{
+    ViewData["Title"] = "Review";
+}
+<h1>Review of a shop</h1>
+<strong>Enter your Review</strong>
+<br />
+<div asp-validation-summary="All" class="text-danger"></div>
+<form method="post" class="container">
+    <div class="form-group row">
+        <div class="col-sm-2"><label>Color:</label></div> <div class="col-sm-4">
+            <input type="radio" name="color" value=1 asp-for="ReviewNumber" />1
+            <input type="radio" name="color" value=2 asp-for="ReviewNumber" />2
+            <input type="radio" name="color" value=3 asp-for="ReviewNumber" />3
+            <input type="radio" name="color" value=4 asp-for="ReviewNumber" />4
+            <input type="radio" name="color" value=5 asp-for="ReviewNumber" />5
+        </div>
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+    </div>
+</form>
+
+<br />
+<hr />

@@ -30,6 +30,7 @@ namespace WCountry.Controllers
             if (ModelState.IsValid)
             {
                 var user = new WCitizen { UserName = model.Username };
+                user.WDollars = 50;
                 var result = await userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
