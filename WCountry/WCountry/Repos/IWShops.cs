@@ -17,6 +17,7 @@ namespace WCountry.Repos
         void UpdateWShop(WShop wshop);
         List<WShop> GetAllWShops();
         List<Item> GetAllItems();
+        int AddReviews(List<Review> reviews);
 
     }
 }

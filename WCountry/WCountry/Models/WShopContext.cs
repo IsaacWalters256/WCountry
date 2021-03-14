@@ -12,6 +12,7 @@ namespace WCountry.Models
         public WShopContext(DbContextOptions<WShopContext> options) : base(options) { }
         public DbSet<WShop> WShops { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<Review> Reviews { get; set; }
 
     }
 }

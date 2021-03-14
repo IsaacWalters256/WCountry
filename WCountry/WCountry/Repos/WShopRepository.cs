@@ -23,6 +23,16 @@ namespace WCountry.Repos
             context.SaveChanges();
         }
 
+        public int AddReviews(List<Review> reviews)
+        {
+            int sum = 0;
+            foreach (Review review in reviews)
+            {
+                sum = sum + review.ReviewNumber;
+            }
+            return sum;
+        }
+
         public void AddWShop(WShop wshop)
         {
             context.WShops.Add(wshop);

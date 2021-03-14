@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WCountry.Models;
 
 namespace WCountry.Migrations
 {
     [DbContext(typeof(WShopContext))]
-    partial class WShopContextModelSnapshot : ModelSnapshot
+    [Migration("20210314004246_init3")]
+    partial class init3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -264,15 +266,18 @@ namespace WCountry.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("WShopName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WShopName1")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("ResponseID");
 
                     b.HasIndex("ReviewerId");
 
-                    b.HasIndex("WShopName");
+                    b.HasIndex("WShopName1");
 
-                    b.ToTable("Reviews");
+                    b.ToTable("Review");
                 });
 
             modelBuilder.Entity("WCountry.Models.WShop", b =>
@@ -381,7 +386,7 @@ namespace WCountry.Migrations
 
                     b.HasOne("WCountry.Models.WShop", null)
                         .WithMany("Reviews")
-                        .HasForeignKey("WShopName");
+                        .HasForeignKey("WShopName1");
                 });
 
             modelBuilder.Entity("WCountry.Models.WShop", b =>

@@ -34,6 +34,7 @@ namespace WCountry.Controllers
         public IActionResult Index(string owner)//, string shopName)
         {
             List<WShop> wshops = null;
+            //int sum = repo.AddReviews()
 
             if (owner != null)//messageSender != "" && 
             {
@@ -94,5 +95,48 @@ namespace WCountry.Controllers
         }
 
 
+        public IActionResult ViewItems()
+        {
+            List<Item> items = repo.GetAllItems();
+
+            return View(items);
+        }
+
+        [HttpPost]
+        public IActionResult ViewItems(string owner)
+        {
+            List<Item> items = null;
+
+            if (owner != null)
+            {
+                items = (from m in repo.GetAllItems()
+                         where m.Owner.Name == owner
+                         select m).ToList();
+            }
+
+            return View(items);
+        }
+
+        [Authorize]
+        public IActionResult ReviewPage(string wshopName)
+        {
+            var reviewVM = new ReviewVM { WShopName = wshopName };
+            return View(reviewVM);
+        }
+
+        [HttpPost]
+        public RedirectToActionResult ReviewPage(ReviewVM reviewVM)
+        {
+            var review = new Review { ReviewNumber = reviewVM.ReviewNumber };
+            review.Reviewer = userManager.GetUserAsync(User).Result;
+            review.Reviewer.Name = review.Reviewer.UserName;
+
+            var wshop = (from r in repo.WShop where r.WShopName == reviewVM.WShopName select r).First<WShop>();
+
+            wshop.Reviews.Add(review);
+            repo.UpdateWShop(wshop);
+
+            return RedirectToAction("Index");
+        }
     }
 }
