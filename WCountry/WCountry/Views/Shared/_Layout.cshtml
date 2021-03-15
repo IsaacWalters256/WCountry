@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - WCountry</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    @if ((string)ViewData["Title"] == "Navigation Page" || (string)ViewData["Title"] == "WTown")
+    {
+        <link rel="stylesheet" href="~/css/site2.css" />
+    }
+    else //if ((string)ViewData["Title"] != "Blender")
+    {
+        <link rel="stylesheet" href="~/css/site.css" />
+    }
 </head>
 <body>
     <header>
         @using Microsoft.AspNetCore.Identity
         @inject SignInManager<WCitizen> signInManager 
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Navigation">WCountry</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"

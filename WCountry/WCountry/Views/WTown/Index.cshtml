@@ -19,19 +19,16 @@ Enter an owner name:
 <h2>WShops:</h2>
 @foreach (WShop wshop in Model)
 {
-    
-    <p>
-        <strong class="pr-3">Store Name:</strong>
-        @wshop.WShopName <br />
-        <p>Number of stars: </p> 
-        <strong class="pr-3">Owner of store:</strong>
-        @wshop.Owner.UserName<br />
-        <a asp-action="ReviewPage" asp-route-wshopName="@wshop.WShopName" class="btn btn-secondary col-3">Give Review</a>
-        @foreach (Review review in wshop.Reviews)
-        {
-            @review.ReviewNumber
-        }
-</p>
-
-    
+    <p>|...|...|.._____________</p>
+    <p>|.......|..|...........|</p>
+    <p>|...|...|..|.@wshop.WShopName</p>
+    <p>|.......|..|.@wshop.Owner.UserName</p>
+    <p>|...|...|..-------------</p>
+    <p>|.......| </p>
+    <a asp-action="ReviewPage" asp-route-wshopName="@wshop.WShopName" class="btn btn-secondary">Give Review</a>
+    @foreach (Review review in wshop.Reviews)
+    {
+        @review.ReviewNumber
+    }
 }
+

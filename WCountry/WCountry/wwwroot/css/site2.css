@@ -9,15 +9,12 @@ a.navbar-brand {
     color: #000000;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+
+nav {
+    background-color: #ff9900;
+    color: #000000;
+    border-color: #ff9900;
 }
 
 .nav-item {
@@ -32,8 +29,7 @@ a {
     border-color: #ff9900;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+
 html {
   font-size: 14px;
   font-family:monospace;
@@ -60,27 +56,38 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
+a {
+    color: #879eb5;
+}
+
+p {
+    font-family: monospace;
+    margin-top:0em;
+    margin-bottom:0em;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-family: monospace;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #f9f9f0;
+    font-family: monospace;
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
-}
-
-nav {
-    background-color: #ff9900;
-    color: #000000;
-    border-color: #ff9900;
+  line-height: 60px;
 }

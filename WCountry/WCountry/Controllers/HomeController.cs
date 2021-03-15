@@ -28,9 +28,16 @@ namespace WCountry.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult VipBlender()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult VipBlender(BlenderVM blender)
+        {
+            blender.CreateBackground();
+            return View(blender);
         }
 
         public IActionResult Privacy()
