@@ -2,7 +2,6 @@ C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\bin\
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\bin\Debug\netcoreapp3.1\WCountry.exe
-C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.csprojAssemblyReference.cache
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.AssemblyInfoInputs.cache
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.AssemblyInfo.cs
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.RazorAssemblyInfo.cache
@@ -94,3 +93,5 @@ C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\CreateItem.cshtml.g.cs
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\ViewItems.cshtml.g.cs
 C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\Razor\Views\WTown\ReviewPage.cshtml.g.cs
+C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\obj\Debug\netcoreapp3.1\WCountry.csprojAssemblyReference.cache
+C:\Users\Isaac\Documents\HomeWork\ASPNET2\WCountryProject\WCountry\WCountry\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\WCountry - Web Deploy\profile.arm.json

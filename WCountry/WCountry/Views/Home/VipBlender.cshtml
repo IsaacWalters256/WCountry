@@ -1,6 +1,62 @@
-﻿@{
-    ViewData["Title"] = "Blending";
+﻿@model BlenderVM
+@{
+    ViewData["Title"] = "Blender";
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>This page will blend things.</p>
+
+@*<link rel="stylesheet" href=@Model?.SiteVariation />*@
+<p>HaHa, jk, its accually an addition only calculator!</p>
+
+<div>
+    <h1 class="display-4">Calculator</h1>
+    <form method="post" class="container">
+
+        <label asp-for="UserAnswer1" class="control-label">What number first?</label>
+        <input asp-for="UserAnswer1" type="number" class="form-control pb-1" />
+        <br />
+        <label asp-for="UserAnswer2">What number second?</label>
+        <input asp-for="UserAnswer2" type="number" class="form-control pb-1" />
+        <br />
+        <p>@Model?.SiteVariation</p>@*I hate this part I tried to do multiple things but none of them worked, if I had more time maybe I could have fixxed it but dang, so for now this is what is going in is a lame number image if statement.*@
+        @if (Model?.SiteVariation == 1)
+        {
+            <img src="~/images/Number1.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+        else if (Model?.SiteVariation == 2)
+        {
+            <img src="~/images/Number2.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+        else if (Model?.SiteVariation == 3)
+        {
+            <img src="~/images/Number3.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+        else if (Model?.SiteVariation == 4)
+        {
+            <img src="~/images/Number4a.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+        else if (Model?.SiteVariation == 5)
+        {
+            <img src="~/images/Number5.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+        else if (Model?.SiteVariation == 6)
+        {
+            <img src="~/images/Number6.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+        else if (Model?.SiteVariation == 7)
+        {
+            <img src="~/images/Number7.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+        else if (Model?.SiteVariation == 8)
+        {
+            <img src="~/images/Number8.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+        else if (Model?.SiteVariation == 9)
+        {
+            <img src="~/images/Number9.png" alt="The number has to be 1-9" width="150" height="150" />
+        }
+
+        <br />
+        <input type="submit" class="form-control btn" />
+    </form>
+</div>

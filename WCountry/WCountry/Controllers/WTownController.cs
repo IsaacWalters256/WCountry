@@ -84,7 +84,7 @@ namespace WCountry.Controllers
             model.IsInShop = false;
 
             repo.AddItem(model);
-            return RedirectToAction("Index", "WTown");
+            return RedirectToAction("ViewItems", "WTown");
         }
 
         public IActionResult ViewWShop(string wshopName)

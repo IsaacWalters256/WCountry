@@ -9,19 +9,21 @@
     <form method="post" class="container">
         <div asp-validation-summary="All"></div>
         <div class="row">
-            <label asp-for="ItemName" class="control-label col-sm-2 col-md-6">Item Name:</label>
-            <input asp-for="ItemName" placeholder="Title" class="form-control col-sm-6 col-md-8" /><br />
+            <div class="col-7">
+                <label asp-for="ItemName" class="control-label col-sm-2 col-md-6">Item Name:</label>
+                <input asp-for="ItemName" placeholder="Name" class="form-control col-sm-6 col-md-8" /><br />
+            </div>
+            <div class="col-5">
+                <label asp-for="ItemPrice" class="control-label col-sm-4 col-md-6">Item Price:</label>
+                <input asp-for="ItemPrice" placeholder="Price" class="form-control col-sm-5 col-md-8" /><br />
+            </div>
         </div>
         <div class="row">
-            <label asp-for="ItemDesc" class="control-label col-sm-2 col-md-6">Item Description:</label>
-            <input asp-for="ItemDesc" placeholder="Title" class="form-control col-sm-6 col-md-8" /><br />
+            <label asp-for="ItemDesc" class="control-label col-sm-5 col-md-6">Item Description:</label>
+            <textarea asp-for="ItemDesc" rows="10" cols="65" placeholder="Desc" class="form-control col-sm-7 col-md-8"></textarea><br />
         </div>
         <div class="row">
-            <label asp-for="ItemPrice" class="control-label col-sm-2 col-md-6">Item Price:</label>
-            <input asp-for="ItemPrice" placeholder="Title" class="form-control col-sm-6 col-md-8" /><br />
-        </div>
-        <div class="row">
-            <button type="submit" class="form-control btn btn-primary col-sm-6 col-md-8 mt-3">Submit</button>
+            <button type="submit" class="form-control btn btn-primary col-sm-6 col-md-8 mt-3">Create the Item</button>
         </div>
     </form>
 
